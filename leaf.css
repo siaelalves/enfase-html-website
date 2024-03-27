@@ -1,0 +1,124 @@
+/*--Regras Globais--*/
+/*-Fontes de Símbolos-*/
+@font-face {
+ font-family: "Leaf";
+ src: url("fonts/Leaf Icons.ttf");
+ font-weight: normal;
+ font-style: normal;
+ font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+ /* Prevenir que extensões alterem fontes */
+ font-family: 'Leaf' !important;
+ speak: never;
+ font-style: normal;
+ font-weight: normal;
+ font-variant: normal;
+ text-transform: none;
+ line-height: 1;
+
+ /*Para melhor renderizamento== */
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+/**/
+/*Tags principais*/
+html{
+ min-height:100%;
+ position:relative;
+}
+body{
+ position:relative;
+ margin:0;
+}
+/*Barra de rolagem*/
+::-webkit-scrollbar {
+ width:2.5px;
+ height:2.5px;
+ -webkit-border-radius:2.5px;
+}
+::-webkit-scrollbar-track-piece {
+ background-color:rgba(0,0,0,0);
+ -webkit-border-radius:2.5px;
+}
+::-webkit-scrollbar-thumb:vertical {
+ height: 5px;
+ background-color: #969696;
+ -webkit-border-radius: 2.5px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+ width:5px;
+ background-color:#969696;
+ -webkit-border-radius:2.5px;
+}
+/*Contêineres*/
+div{
+ font-size:0;
+ margin:0 auto;
+ line-height:0;
+}
+.container{
+ height:auto;
+ position:relative;
+}
+.wrapper{
+ height:auto;
+ width:auto;
+ margin:0 auto;
+}
+p,h1,h2,h3,h4,h5,h6{
+ margin:0;
+ line-height:normal;
+}
+/*Formulários*/
+form{
+ height:auto;
+ width:100%;
+ font-family:inherit;
+ font-size:1.5rem;
+}
+form p{
+ text-align:left;
+ font:inherit;
+}
+label{
+ font:inherit;
+}
+span{
+ font-size:inherit;
+}
+input,label,textarea{
+ font:inherit;
+ width:100%;
+}
+input.field{
+ height:2.5rem;
+}
+input.field,textarea{
+ margin-top:5px;
+ margin-bottom:10px;
+ padding:5px 5px;
+}
+input.button{
+ font-size:inherit;
+ padding:5px 50px;
+}
+textarea{
+ height:10rem;
+ padding:7.5px 5px;
+ resize:none;
+}
+/*-Caracteres e símbolos-*/
+/*Fonte:Leaf*/
+.icon-seta-esquerda:before {
+ content: "\61";
+}
+.icon-seta-direita:before {
+ content: "\62";
+}
+.icon-menu:before {
+ content: "\63";
+}
+.icon-fechar:before {
+ content: "\64";
+}
