@@ -1,0 +1,97 @@
+/*
+ Copyright © 2024, Siael Alves
+ Cores globais:#663130 (vinho), #abb8c3 (cinza), #dad7d2 (cinza marca d'água)
+*/
+/*FONTES*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/*Globais*/
+*{
+ font-family:"Cormorant Garamond";
+ font-size:1rem;
+}
+h1{
+ font-size:3.3rem;
+ text-align:center;
+}
+h2{
+ font-size:3rem;
+ text-align:center;
+}
+a{
+ color:inherit;
+ text-decoration:none;
+}
+a:hover{
+ text-decoration:dashed;
+}
+ul{
+ margin:0;padding:0;
+}
+ul li{
+ margin:0;padding:0;
+ list-style-type:none;
+ display:inline;
+}
+section{
+ height:100%;
+ width:100%;
+}
+/*-Header-*/
+header{
+ height:96px;
+ width:100%;
+ padding:0px 1%;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:nowrap;
+ align-items:center;
+ color:#FFFFFF;
+ background-color:#000000;
+}
+div#companyLogo {
+ color:inherit;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:nowrap;
+ align-content:center;
+ align-items:center;
+}
+img#companyIcon{
+ height:64px;
+ width:auto;
+}
+/*Menu*/
+nav{
+ font-size:1.2rem;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:nowrap;
+ align-items:center;
+ color:inherit;
+}
+nav ul{
+ font-size:inherit;
+}
+nav ul li{
+ font-size:inherit;
+ margin:0rem 2rem 0rem 0rem;
+}
+nav ul li a{
+ font-size:inherit;
+ display:inline-block;
+ position:relative;
+}
+nav ul li a::before{
+ height:1px;
+ width:0%;
+ content:"";
+ position:absolute;
+ bottom:0;left:0;
+ background-color:#FFFFFF;
+ transition:width 0.25s ease;
+}
+nav ul li a:hover::before{
+ width:100%;
+}
+/*--MAIN--*/
+/*-SECTION slides-*/
