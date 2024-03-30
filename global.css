@@ -102,10 +102,10 @@ section{
  position:absolute;
  border-style:solid;
  border-width:1px;
- animation-duration:0.5s;
- animation-iteration-count:1;
- animation-timing-function:ease;
- animation-direction:normal;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+ animation-timing-function:ease-in;
+ animation-direction:alternate-reverse;
 }
 @keyframes leafMovement{
  0%{transform:rotate(49deg) rotateY(0deg);}
@@ -124,8 +124,20 @@ section{
  100%{width:15vw;}
 }
 @keyframes horizontalLineLetteringGrow{
- 0%{width:0%;}
- 100%{width:100%;}
+ 0%{width:0%;left:50%;}
+ 100%{width:100%;left:0%;}
+}
+@keyframes horizontalLineLetteringPulse{
+ 0%{width:100%;left:0%;}
+ 100%{width:80%;left:80%;}
+}
+@keyframes horizontalLineMidPulse1{
+ 0%{width:9vw;}
+ 100%{width:7.2vw;}
+}
+@keyframes horizontalLineMidPulse2{
+ 0%{width:15vw;}
+ 100%{width:12vw;}
 }
 /*BOTÃO DE NAVEGAÇÃO*/
 .navSlideBtn{
@@ -260,11 +272,11 @@ h2#slideTitle1{
 div#horizontalLineLettering{
  margin-bottom:2.5%;
  z-index:1; 
- animation-name:horizontalLineLetteringGrow;
- animation-duration:0.5s;
- animation-iteration-count:1;
- animation-timing-function:ease;
- animation-direction:normal;
+ animation-name:horizontalLineLetteringPulse;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+ animation-timing-function:ease-in;
+ animation-direction:alternate-reverse;
 }
 span#lettering1::after,span#lettering4::after{
  height:9vw;
@@ -288,13 +300,13 @@ span#horizontalLineMid1{
  width:9vw;
  top:67%;
  left:0;
- animation-name:horizontalLineMidGrow1;
+ animation-name:horizontalLineMidPulse1;
 }
 span#horizontalLineMid2{
  width:15vw;
  top:60%;
  left:0;
- animation-name:horizontalLineMidGrow2;
+ animation-name:horizontalLineMidPulse2;
 }
 span#lettering3{
  transform:translate(0px, 20pt);
