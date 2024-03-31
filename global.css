@@ -77,7 +77,7 @@ section{
  top:0;left:0;
  object-fit:contain;
  z-index:0;
- transition:opacity 0.25s ease;
+ transition:opacity 1s ease;
 }
 /*REDUZIR FOTO DE FUNDO*/
 .scaleDown1{
@@ -292,8 +292,8 @@ ul#topLinks{
 /*SLIDE 1*/
 .slideIntro{
  height:auto;
- width:90%;
- padding:0 5%;
+ width:80%;
+ padding:0 10%;
  display:flex;
  flex-direction:column;
  flex-wrap:nowrap;
@@ -389,12 +389,12 @@ h3.slideSubText{
 }
 div#navBtnLeft{
  left:0;
- top:50%;
+ top:50vh;
  transform:translate(0,-50%);
 }
 div#navBtnRight{
  right:0;
- top:50%;
+ top:50vh;
  transform:translate(0,-50%);
 }
 /*SLIDE 2*/

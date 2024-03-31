@@ -11,27 +11,54 @@ let slideAutoPlay=true;
 //
 /*EVENTOS*/
 document.querySelector("#navBtnRight").addEventListener("click",nextSlide);
+document.querySelector("#navBtnLeft").addEventListener("click",previousSlide);
 //
 /*FUNÇÕES*/
 /**Avança para o próximo slide.*/
-function nextSlide(){
- document.querySelectorAll(".backgroundPhoto").forEach(e=>{e.classList.add("scaleDown1")});
- 
- document.querySelectorAll(".bkgColorWhite").forEach(e=>{e.style.opacity=1;});
- document.querySelector("#slide"+slide).classList.add("inactive");
+function nextSlide(){ 
+ document.querySelector(".bkgColorWhite").style.opacity=1;
+ document.querySelector(".bkgColorWhite").style.zIndex=1;
 
- if(slide<slideQt){
-  slide+=1;
-  document.querySelectorAll(".backgroundPhoto").forEach(e=>{e.classList.remove("scaleDown1")});
-  document.querySelectorAll(".bkgColorWhite").forEach(e=>{e.style.opacity=0;});
-  document.querySelector("#slide"+slide).classList.remove("inactive");
-  return;
- }
- if(slide==slideQt){
-  slide=1;
-  document.querySelectorAll(".backgroundPhoto").forEach(e=>{e.classList.remove("scaleDown1")});
-  document.querySelectorAll(".bkgColorWhite").forEach(e=>{e.style.opacity=0;});
-  document.querySelector("#slide"+slide).classList.remove("inactive");
-  return;
- }
+ setTimeout(function(){
+  document.querySelector("#slide"+slide).classList.add("inactive");
+  if(slide<slideQt){
+   slide+=1;
+   document.querySelector("#slide"+slide).classList.remove("inactive");
+
+    document.querySelector(".bkgColorWhite").style.opacity=0;
+    document.querySelector(".bkgColorWhite").style.zIndex=0;
+   return;
+  }
+  if(slide==slideQt){
+   slide=1;
+   document.querySelector("#slide"+slide).classList.remove("inactive");
+    document.querySelector(".bkgColorWhite").style.opacity=0;
+    document.querySelector(".bkgColorWhite").style.zIndex=0;
+   return;
+  }
+ },1000)
+}
+/**Retorna pra o slide anterior*/
+function previousSlide(){
+ document.querySelector(".bkgColorWhite").style.opacity=1;
+ document.querySelector(".bkgColorWhite").style.zIndex=1;
+
+ setTimeout(function(){
+  document.querySelector("#slide"+slide).classList.add("inactive");
+  if(slide>1){
+   slide-=1;
+   document.querySelector("#slide"+slide).classList.remove("inactive");
+
+    document.querySelector(".bkgColorWhite").style.opacity=0;
+    document.querySelector(".bkgColorWhite").style.zIndex=0;
+   return;
+  }
+  if(slide==1){
+   slide=slideQt;
+   document.querySelector("#slide"+slide).classList.remove("inactive");
+    document.querySelector(".bkgColorWhite").style.opacity=0;
+    document.querySelector(".bkgColorWhite").style.zIndex=0;
+   return;
+  }
+ },1000)
 }
