@@ -50,19 +50,49 @@ section{
  border-color:#FFFFFF;
  border-width:1px;
 }
+/*LINHA HORIZONTAL 2*/
+.horizontalLine-2{
+ height:auto;
+ width:69%;
+ border-style:solid;
+ border-color:#FFFFFF80;
+ border-width:1px;
+}
 /*OPACIDADE*/
-.bkgColor{
+.bkgColorBlack{
  height:100%;
  width:100%;
  background-color:#00000080;
  position:absolute;
  top:0;left:0;
+ object-fit:contain;
  z-index:0;
 }
+.bkgColorWhite{
+ height:100%;
+ width:100%;
+ background-color:#FFFFFF;
+ opacity:0;
+ position:absolute;
+ top:0;left:0;
+ object-fit:contain;
+ z-index:0;
+ transition:opacity 0.25s ease;
+}
+/*REDUZIR FOTO DE FUNDO*/
+.scaleDown1{
+ transform:scale(0.8);
+}
+/*MOSTRAR/OCULTAR*/
+.inactive{display:none !important;}
+.active{display:flex !important;}
+
+.visible{visibility:visible !important;}
+.inivisible{visibility:hidden !important;}
 /*LETTERING*/
 .lettering{
  height:64%;
- width:80%;
+ width:90%;
  font-weight:lighter;
  text-align:justify;
  color:#FFFFFF;
@@ -82,7 +112,7 @@ section{
  display:flex;
  flex-direction:row;
  align-content:center;
- align-items:center;
+ align-items:baseline;
  justify-content:space-between;
 }
 .lettering .featured{
@@ -115,6 +145,14 @@ section{
  0%{transform:rotateY(0deg);}
  100%{transform:rotateY(49deg);}
 }
+@keyframes leafMovement-3{
+ 0%{transform:skew(0deg,0deg);bottom:80%;}
+ 100%{transform:skew(4deg,13deg);bottom:76%;}
+}
+@keyframes leafMovement-4{
+ 0%{transform:skew(0deg,0deg);bottom:92%;}
+ 100%{transform:skew(5deg,5deg);bottom:87%;}
+}
 @keyframes horizontalLineMidGrow1{
  0%{width:0vw;}
  100%{width:9vw;}
@@ -130,6 +168,10 @@ section{
 @keyframes horizontalLineLetteringPulse{
  0%{width:100%;left:0%;}
  100%{width:80%;left:80%;}
+}
+@keyframes horizontalLineLetteringPulse2{
+ 0%{width:69%;}
+ 100%{width:67%;}
 }
 @keyframes horizontalLineMidPulse1{
  0%{width:9vw;}
@@ -247,6 +289,7 @@ ul#topLinks{
 }
 /*--MAIN--*/
 /*-SECTION slides-*/
+/*SLIDE 1*/
 .slideIntro{
  height:auto;
  width:90%;
@@ -259,20 +302,26 @@ ul#topLinks{
  background-size:cover;
  background-repeat:no-repeat;
 }
-div#slide1{
- background-image:url("assets/slide-1.jpg");
+.slidePhoto{
+ height:100%;
+ width:100%;
+ object-fit:cover;
+ position:absolute;
+ left:0;
+ top:0;
+ z-index:-1;
 }
-div#slide2{
- background-image:url("assets/slide-2.jpg");
+.backgroundPhoto{
+ transition:transform 0.25s ease;
 }
-h2#slideTitle1{
+h2.lettering{
  margin-top:32vh;
- margin-bottom:5%;
+ margin-bottom:12vh;
 }
-div#horizontalLineLettering{
+div.horizontalLine-1{
  margin-bottom:2.5%;
- z-index:1; 
- animation-name:horizontalLineLetteringPulse;
+ z-index:1;
+ animation-name:horizontalLineLetteringPulse2;
  animation-duration:2s;
  animation-iteration-count:infinite;
  animation-timing-function:ease-in;
@@ -325,6 +374,7 @@ span#lettering4{
  font-style:normal;
  font-weight:600;
  line-height:0;
+ transform:translate(0,20pt);
 }
 h3.slideSubText{
  height:auto;
@@ -334,7 +384,7 @@ h3.slideSubText{
  color:#FFFFFF;
  z-index:1;
 }
-#slideContactBtn{
+.slideContactBtn{
  z-index:1;
 }
 div#navBtnLeft{
@@ -346,4 +396,62 @@ div#navBtnRight{
  right:0;
  top:50%;
  transform:translate(0,-50%);
+}
+/*SLIDE 2*/
+div#slide2{
+ align-items:center;
+}
+div#slide2.slideIntro .lettering .line{
+ line-height:1.2;
+}
+h2#slideTitle2{
+ width:100%;
+}
+div#letteringLine3{
+ justify-content:flex-start;
+}
+div#letteringLine4{
+ justify-content:flex-end;
+}
+span#lettering5,span#lettering8{
+ font-size:10vw;
+ position:relative;
+}
+div.horizontalLine-2{
+ z-index:1;
+ position:absolute;
+ right:0;
+ transform:translate(-6vw,0.6vw);
+ animation-name:horizontalLineLetteringPulse2;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+ animation-timing-function:ease-in-out;
+ animation-direction:alternate-reverse;
+}
+span#lettering5::after,span#lettering8::after{
+ height: 9vw;
+ width: 9vw;
+ content: "";
+ position: absolute;
+ background-size: 9vw 9vw;
+ background-repeat: no-repeat;
+ animation-duration:2s;
+ animation-iteration-count:infinite;
+ animation-timing-function:ease-out;
+ animation-direction:alternate-reverse;
+}
+span#lettering8::after {
+ right: -3%;
+ bottom: 92%;
+ background-image: url("assets/leaf-5.svg");
+ animation-name:leafMovement-4;
+}
+span#lettering5::after {
+ left: 0%;
+ bottom: 80%;
+ background-image: url("assets/leaf-4.svg");
+ animation-name:leafMovement-3;
+}
+h3#slideSub2{
+ text-align:center;
 }
