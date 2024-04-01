@@ -231,7 +231,9 @@ header{
  flex-wrap:nowrap;
  align-items:center;
  color:#FFFFFF;
+ background-color:#00000000;
  z-index:2;
+ transition:background-color 0.25s ease;
 }
 /*Menu*/
 nav{

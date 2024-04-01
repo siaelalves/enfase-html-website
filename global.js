@@ -12,8 +12,17 @@ let slideAutoPlay=true;
 /*EVENTOS*/
 document.querySelector("#navBtnRight").addEventListener("click",nextSlide);
 document.querySelector("#navBtnLeft").addEventListener("click",previousSlide);
+window.addEventListener("scroll",setHeaderBlack);
 //
 /*FUNÇÕES*/
+/**Faz o cabeçalho ficar preto se o visitante rolar para baixo*/
+function setHeaderBlack(){
+ if(window.scrollY>0){
+  document.querySelector("header").style.backgroundColor="#262626";
+ }else{
+  document.querySelector("header").style.backgroundColor="#26262600";
+ }
+}
 /**Avança para o próximo slide.*/
 function nextSlide(){ 
  document.querySelector(".bkgColorWhite").style.opacity=1;
