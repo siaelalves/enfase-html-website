@@ -192,7 +192,7 @@
     </ul>
    </section>
    <section id="caseStudies">
-    <h2 class="waterMark">Casos Reais</h2>
+    <h2 id="caseStudiesTitle" class="waterMark">Casos Reais</h2>
     <div id="caseGallery" class="caseGallery">
      <div id="customer1" class="case simple">
       <!--Foto de <a href="https://unsplash.com/pt-br/@alexanderhipp?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alexander Hipp</a> na <a href="https://unsplash.com/pt-br/fotografias/um-homem-usando-oculos-e-uma-camisa-preta-iEEBWgY_6lA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>-->
@@ -251,14 +251,15 @@
       </div>
      </div>
     </div>
-   </section>
-   <section>
-    <h2>Newsletter</h2>
-    <form id="newsletterForm">
-     <input id="txtSubscribeEmail" name="txtEmail" type="email"></input>
-     <input id="chkPrivacy" name="txtEmail" type="checkbox">I agree with Privacy Policy</input>
-     <input id="btnNewsletterSubmit" type="submit"></input>
-    </form>
+    <div id="subscribeFormSection">
+     <h2 id="subscribeSectionTitle" class="waterMark">Newsletter</h2>
+     <form id="subscribeForm">
+      <input id="txtSubscribeEmail" class="floatingLine" name="txtEmail" type="email" placeholder="Digite seu e-mail . . ."></input>
+      <input id="btnNewsletterSubmit" type="submit" class="floatingButton"></input>
+      <input id="chkPrivacy" name="txtEmail" type="checkbox">
+      <p id="chkPrivacyText">Eu concordo com os <u>Termos de Privacidade</u></p>     
+     </form>
+    </div>
    </section>
    <section>
     <h2>Agendar uma consulta</h2>

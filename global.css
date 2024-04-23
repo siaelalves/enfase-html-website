@@ -148,6 +148,13 @@ section{
  animation-timing-function:ease-in;
  animation-direction:alternate-reverse;
 }
+.waterMark{
+ width:97%;
+ font-size:9rem;
+ color:#dad7d2;
+ position:absolute;
+ top:8vh;
+}
 @keyframes leafMovement{
  0%{transform:rotate(49deg) rotateY(0deg);}
  100%{transform:rotate(49deg) rotateY(49deg);}
@@ -230,6 +237,25 @@ button{
 }
 button:hover{
  background-color:#663130;
+}
+/*CAIXA DE TEXTO*/
+.floatingLine{
+ /*Estilo para input[type=text]*/
+ border-top:0;
+ border-left:0;
+ border-right:0;
+ border-bottom:1px solid #663130;
+ outline:none;
+}
+/*BOTÃO DE FORMULÁRIO*/
+.floatingButton{
+ /*Estilo para input[type=submit]*/
+ width:auto;
+ background-color:#00000000;
+ border-top:none;
+ border-left:none;
+ border-right:none;
+ border-bottom:1px solid #663130;
 }
 /*-Header-*/
 header{
@@ -644,18 +670,17 @@ section#caseStudies{
  position:relative;
  background-color:#fcf8f2;
 }
+h2#caseStudiesTitle{
+ font-size:18vw;
+}
 section#caseStudies h2.waterMark{
- width:97%;
- font-size:9rem;
  text-transform:uppercase;
- color:#dad7d2;
- position:absolute;
- top:8vh;
 }
 div.caseGallery{
  height:80vh;
  width:100%;
  margin-top:6vh;
+ margin-bottom:24vh;
  display:flex;
  flex-direction:column;
  flex-wrap:wrap;
@@ -714,4 +739,60 @@ div.customerBox p{
 @keyframes fadeIn{
  0%{opacity:0;}
  100%{opacity:100%;}
+}
+/*Subscribe Form*/
+div#subscribeFormSection{
+ height:auto;
+ width:100%;
+ position:relative;
+}
+h2#subscribeSectionTitle{
+ font-size:21vw;
+ text-transform:none !important;
+ top:50%;
+ transform:translate(0,-50%);
+ z-index:0;
+}
+form#subscribeForm{
+ height:auto;
+ width:66%;
+ margin:0 auto;
+ position:relative;
+ font-size:inherit;
+ font-weight:600;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:wrap;
+ align-content:center;
+ justify-content:flex-start;
+ align-items:normal;
+ z-index:1;
+}
+input#txtSubscribeEmail{
+ width:75%;
+ text-align:left;
+}
+input#btnNewsletterSubmit{
+ width:19%;
+}
+input#txtSubscribeEmail,input#btnNewsletterSubmit{
+ padding:18px 3%;
+ margin-bottom:18px;
+}
+input[type="email"],input[type="text"],input[type="phone"],input[type="date"],input[type="submit"]{
+ font-size:1rem;
+ text-align:center;
+ background-color:#00000000;
+}
+input#chkPrivacy{
+ display:inline;
+ width:auto;
+ margin-left:3%;
+}
+p#chkPrivacyText{
+ width:auto;
+ font-size:1rem;
+ margin-left:1.5%;
+ display:inline;
+ align-self:center;
 }
