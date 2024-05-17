@@ -261,28 +261,46 @@
      </form>
     </div>
    </section>
-   <section>
-    <h2>Agendar uma consulta</h2>
-    <form id="appointmentForm">
-     <label for="txtName">Your name:</label>
-     <input id="txtName" name="txtName" type="text"></input>
+   <section id="bookAppointment">
+    <div id="appointmentFormArea" class="appointmentArea">
+     <h2>Vamos agendar uma consulta:</h2>
+     <form id="appointmentForm">
+      
+      <div id="appointmentFormGroup-1" class="appointmentGroup">
+       <label for="txtName">Your name:</label>
+       <input id="txtName" name="txtName" type="text"></input>
+      </div>
 
-     <label for="selTreatment">Select your tretament</label>
-     <select name="selTreatment" id="selTreatment">
-      <option value="treatment1">Brain Therapy</option>
-      <option value="treatment2">Mind Care Therapy</option>
-     </select>
+      <div id="appointmentFormGroup-2" class="appointmentGroup">
+       <label for="selTreatment">Select your tretament</label>
+       <select name="selTreatment" id="selTreatment">
+        <option value="treatment1">Brain Therapy</option>
+        <option value="treatment2">Mind Care Therapy</option>
+       </select>
+      </div>
 
-     <label for="txtDate">Date:</label>
-     <input id="txtDate" name="txtDate" type="date"></input>
+      <div id="appointmentFormGroup-3" class="appointmentGroup">
+       <label for="txtDate">Date:</label>
+       <input id="txtDate" name="txtDate" type="date"></input>
+      </div>
 
-     <label for="txtPhone">Phone Number:</label>
-     <input id="txtPhone" name="txtPhone" type="phone"></input>
+      <div id="appointmentFormGroup-4" class="appointmentGroup">
+       <label for="txtPhone">Phone Number:</label>
+       <input id="txtPhone" name="txtPhone" type="phone"></input>
+      </div>
 
-     <label for="txtEmail">E-mail:</label>
-     <input id="txtAppointmentEmail" name="txtEmail" type="email"></input>
-     <input id="btnAppointmentSubmit" type="submit"></input>
-    </form>
+      <div id="appointmentFormGroup-5" class="appointmentGroup">
+       <label for="txtEmail">E-mail:</label>
+       <input id="txtAppointmentEmail" name="txtEmail" type="email"></input>
+      </div>
+
+      <input id="btnAppointmentSubmit" type="submit"></input>
+     </form>
+    </div>
+    <figure id="appointmentPhoto" class="appointmentArea">
+     <img id="appointmentPhotoImg" src="assets/appointmentForm.jpg" alt="Uma agenda aberta e vazia.">
+     <!--Foto de <a href="https://unsplash.com/pt-br/@jeshoots?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">JESHOOTS.COM</a> na <a href="https://unsplash.com/pt-br/fotografias/lapis-no-caderno-aberto-9n1USijYJZ4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>-->
+    </figure>
    </section>
   </main>
   <footer>

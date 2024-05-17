@@ -796,3 +796,83 @@ p#chkPrivacyText{
  display:inline;
  align-self:center;
 }
+/*-SECTION bookAppointment-*/
+section#bookAppointment{
+ height:100vh;
+ width:100%;
+ display:flex;
+ flex-direction:row;
+ flex-wrap:nowrap;
+ align-items:flex-start;
+ justify-content:space-between;
+ background-color:#663130;
+ color:#FFFFFF;
+}
+section#bookAppointment h2{
+ text-align:left;
+}
+.appointmentArea{
+ width:48%;
+ padding:5% 1.5%;
+}
+div#appointmentPhoto{
+ background-image:url("assets/appointmentForm.jpg");
+ object-fit:cover;
+}
+figure#appointmentPhoto{
+ margin:0%;
+ padding:0%;
+}
+figure img#appointmentPhotoImg{
+ height:100vh;
+ width:100%;
+ object-fit:cover;
+}
+form#appointmentForm{
+ font-size:1rem;
+ line-height:1;
+}
+form#appointmentForm input[type="email"],
+form#appointmentForm input[type="text"],
+form#appointmentForm input[type="phone"],
+form#appointmentForm input[type="date"],
+form#appointmentForm select{
+ height:auto;
+ width:94%;
+ padding:3%;
+ margin-left:0% !important;
+ margin-right:0% !important;
+ margin-top:6pt;
+ margin-bottom:12pt;
+ color:#FFFFFF;
+ border:none;
+ border-radius:3px;
+ background-color:#6d4747;
+ text-align:left;
+}
+form#appointmentForm select{
+ width:100%;
+}
+form#appointmentForm input[type="submit"]{
+ height:auto;
+ width:100%;
+ padding:3%;
+ margin-top:6pt;
+ margin-bottom:12pt;
+ color:#FFFFFF;
+ border-style:solid;
+ border-color:#6d4747;
+ text-align:center;
+}
+div#appointmentGroup-1{
+ width:100%;
+}
+div#appointmentFormGroup-2,div#appointmentFormGroup-3,
+div#appointmentFormGroup-4,div#appointmentFormGroup-5{
+ width:49%;
+ display:inline-block;
+ margin:0%;
+}
+div.appointmentGroup{
+ font:inherit;
+}
