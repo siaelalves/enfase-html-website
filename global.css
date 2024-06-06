@@ -1,6 +1,5 @@
 /*
  Copyright © 2024, Siael Alves
- Cores globais:#663130 (vinho), #abb8c3 (cinza), #dad7d2 (cinza marca d'água)
 */
 /*FONTES*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
@@ -666,6 +665,7 @@ section#whyChoose ul{
 section#caseStudies{
  height:auto;
  width:97%;
+ margin-bottom:0;
  padding:18vh 1.5%;
  position:relative;
  background-color:#fcf8f2;
@@ -812,6 +812,7 @@ section#bookAppointment h2{
  text-align:left;
 }
 .appointmentArea{
+ height:-webkit-fill-available;
  width:48%;
  padding:5% 1.5%;
 }
@@ -839,7 +840,6 @@ form#appointmentForm input[type="date"],
 form#appointmentForm select{
  height:auto;
  width:94%;
- padding:3%;
  margin-left:0% !important;
  margin-right:0% !important;
  margin-top:6pt;
@@ -847,7 +847,7 @@ form#appointmentForm select{
  color:#FFFFFF;
  border:none;
  border-radius:3px;
- background-color:#6d4747;
+ background-color:#703e3d;
  text-align:left;
 }
 form#appointmentForm select{
@@ -855,7 +855,7 @@ form#appointmentForm select{
 }
 form#appointmentForm input[type="submit"]{
  height:auto;
- width:100%;
+ width:98%;
  padding:3%;
  margin-top:6pt;
  margin-bottom:12pt;
@@ -863,6 +863,9 @@ form#appointmentForm input[type="submit"]{
  border-style:solid;
  border-color:#6d4747;
  text-align:center;
+}
+form#appointmentForm ::placeholder{
+ color:#FFFFFF;
 }
 div#appointmentGroup-1{
  width:100%;
@@ -875,4 +878,20 @@ div#appointmentFormGroup-4,div#appointmentFormGroup-5{
 }
 div.appointmentGroup{
  font:inherit;
+}
+div#appointmentFormGroup-2,div#appointmentFormGroup-4{
+ width:45%;
+ margin-right:4%;
+}
+input#txtPhone{
+ width:96% !important;
+}
+.appointmentForm{
+ padding-right:2%;
+ padding-left:2%;
+ padding-top:4%;
+ padding-bottom:4%;
+}
+input#txtName.appointmentForm{
+ padding:2% !important;
 }
