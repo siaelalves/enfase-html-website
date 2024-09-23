@@ -825,7 +825,7 @@ figure#appointmentPhoto{
  padding:0%;
 }
 figure img#appointmentPhotoImg{
- height:100vh;
+ height:100%;
  width:100%;
  object-fit:cover;
 }
@@ -894,4 +894,11 @@ input#txtPhone{
 }
 input#txtName.appointmentForm{
  padding:2% !important;
+}
+
+footer{
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
 }
